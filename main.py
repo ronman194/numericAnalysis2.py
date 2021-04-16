@@ -177,6 +177,7 @@ def cond(A,A1):
 # /////////////////////////////////////////////////
 def first_way(A,b):
     a1=inverseMatrix(A)
+    cond(A,a1)
     x=mul_Matrix(a1,b)
     print_Matrix(x)
     return x
