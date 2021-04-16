@@ -171,7 +171,7 @@ def cond(A,A1):
             a=temp
         if temp1>a1:
             a1=temp1
-    print("a= {0}  , a1= {1}".format(a,a1))
+    print("||A||= {0}  , ||A1||= {1}".format(a,a1))
     print("Cond ||A||*||A^-1||= {0}".format(a*a1))
     return a*a1
 # /////////////////////////////////////////////////
@@ -183,19 +183,19 @@ def first_way(A,b):
     return x
 
 # /////////////////////////////////////////////////
-def second_way(A, b):
+def second_way(A):
     U,L = LU(A,0)
     print("L: ")
     print_Matrix(L)
     print("U: ")
     print_Matrix(U)
 # /////////////////////////////////////////////////
-A= [[2,3,5],[0,2,1],[1,2,3]]
+A= [[0,1,1,1],[1,1,2,1],[2,2,4,0],[1,2,1,1]]
 b=[[1, -1,1]]
 
 
 if len(A)>=4:
-    second_way(A,b)
+    second_way(A)
 else:
     first_way(A,b)
 
